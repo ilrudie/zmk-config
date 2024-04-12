@@ -35,6 +35,29 @@
         };
     };
 
+    macros {
+        go_assign: go_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+            label = "GO_ASSIGN";
+        };
+
+        rust_return: rust_return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp LS(PERIOD)>;
+            label = "RUST_RETURN";
+        };
+
+        rust_match: rust_match {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp LS(PERIOD)>;
+            label = "RUST_MATCH";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,10 +90,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans    &trans        &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp RBKT  &kp LS(RBRC)  &kp LS(RPAR)    &trans  &trans  &trans  &trans  &trans
-                          &trans        &trans          &trans  &trans
+&trans  &rust_match        &rust_return           &go_assign  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)   &kp LS(N9)  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N0)  &trans    &trans  &trans  &trans  &trans  &trans
+                                                  &trans      &trans    &trans  &trans
             >;
         };
 
