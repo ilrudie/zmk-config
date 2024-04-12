@@ -49,7 +49,7 @@
 
         mod_ext {
             bindings = <
-&trans      &trans    &trans      &trans     &trans                  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans      &trans     &to 5                   &trans  &trans  &trans  &trans  &trans
 &caps_word  &kp TAB   &kp ESCAPE  &kp ENTER  &kp LS(LA(LC(LGUI)))    &trans  &trans  &trans  &trans  &trans
 &sk LALT    &sk LGUI  &sk LCTRL   &sk LSHFT  &kp LG(LC(SPACE))       &trans  &trans  &trans  &trans  &trans
                                   &kp DEL    &trans                  &trans  &trans
@@ -85,10 +85,10 @@
 
         func {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &trans  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &trans        &trans
+&kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &trans  &kp C_PREV            &kp C_NEXT     &kp C_PP      &trans
+&trans  &trans  &kp F11  &kp F12  &trans     &trans  &kp C_MUTE            &kp C_VOL_DN   &kp C_VOL_UP  &trans
+                         &to 0    &trans     &trans  &to 0
             >;
         };
 
