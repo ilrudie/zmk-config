@@ -30,7 +30,7 @@
         compatible = "zmk,conditional-layers";
 
         keeb_sys {
-            if-layers = <3 3 5 4>;
+            if-layers = <1 2 3 4>;
             then-layer = <6>;
         };
     };
