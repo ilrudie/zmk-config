@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
 // #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -26,14 +27,7 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        keeb_sys {
-            if-layers = <1 2 3 4>;
-            then-layer = <6>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
         go_assign: go_assign {
@@ -55,6 +49,15 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(PERIOD)>;
             label = "RUST_MATCH";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        keeb_sys {
+            bindings = <&to 6>;
+            key-positions = <13 12 16 17>;
         };
     };
 
@@ -117,10 +120,10 @@
 
         keeb_sys {
             bindings = <
-  &sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-  &bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-  &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                               &trans      &trans          &trans  &trans
+  &sys_reset   &trans  &out OUT_TOG  &bt BT_CLR_ALL  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+  &bootloader  &trans  &trans        &trans          &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+  &trans       &trans  &trans        &bt BT_CLR      &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                                     &to 0           &trans          &trans  &to 0
             >;
         };
     };
