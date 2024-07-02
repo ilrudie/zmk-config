@@ -97,7 +97,37 @@
 
         keeb_sys {
             bindings = <&to 6>;
-            key-positions = <13 12 16 17>;
+            key-positions = <2 3 6 7>;
+        };
+
+        space-chord {
+            bindings = <&kp SPACE>;
+            key-positions = <16 17>;
+        };
+
+        backspace_chord {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <12 13>;
+        };
+
+        tab-chord {
+            bindings = <&kp TAB>;
+            key-positions = <16 18>;
+        };
+
+        escape-chord {
+            bindings = <&kp ESCAPE>;
+            key-positions = <13 11>;
+        };
+
+        delete-chord {
+            bindings = <&kp DEL>;
+            key-positions = <13 14>;
+        };
+
+        return-chord {
+            bindings = <&kp RET>;
+            key-positions = <16 19>;
         };
     };
 
