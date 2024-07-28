@@ -100,16 +100,6 @@
             key-positions = <2 3 6 7>;
         };
 
-        space-chord {
-            bindings = <&kp SPACE>;
-            key-positions = <16 17>;
-        };
-
-        backspace_chord {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <12 13>;
-        };
-
         tab-chord {
             bindings = <&kp TAB>;
             key-positions = <16 18>;
@@ -117,17 +107,22 @@
 
         escape-chord {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 11>;
+            key-positions = <13 12>;
         };
 
         delete-chord {
             bindings = <&kp DEL>;
-            key-positions = <13 14>;
+            key-positions = <13 11>;
         };
 
         return-chord {
             bindings = <&kp RET>;
             key-positions = <16 19>;
+        };
+
+        return2-chord {
+            bindings = <&kp RET>;
+            key-positions = <16 17>;
         };
     };
 
@@ -139,7 +134,7 @@
   &kp Q         &kp W        &kp E         &kp R         &kp T                      &kp Y                    &kp U         &kp I             &kp O        &kp P
   &mtl LCTRL A  &mtl LGUI S  &ltl 4 D      &ltl 2 F      &mtl LS(LA(LC(LGUI))) G    &mtr RS(RA(RC(RGUI))) H  &ltr 1 J      &ltr 3 K          &mtr RGUI L  &mtr RCTRL SEMICOLON
   &kp Z         &kp X        &mtl LSHFT C  &mtl LSHFT V  &kp B                      &kp N                    &mtr RSHFT M  &mtr RSHFT COMMA  &kp DOT      &kp FSLH
-                                           &kp ESCAPE    &kp BACKSPACE              &kp SPACE                &kp TAB
+                                           &kp LSHFT     &kp BACKSPACE              &kp SPACE                &kp RSHFT
             >;
         };
 
