@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
 
@@ -37,7 +37,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
 
@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
 
@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
 
@@ -169,7 +169,7 @@
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans
   &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans         &trans     &trans     &trans
+  &trans  &trans  &trans  &trans  &trans    &trans    &kp RC(D)      &kp RC(U)  &trans     &trans
                           &trans  &trans    &trans    &trans
             >;
         };
