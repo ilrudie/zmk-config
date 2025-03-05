@@ -167,9 +167,9 @@
 
         arrows {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans
-  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans    &kp RC(D)      &kp RC(U)  &trans     &trans
+  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp LG(EQUAL)
+  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp LG(KP_NUMBER_0)
+  &trans  &trans  &trans  &trans  &trans    &trans    &kp RC(D)      &kp RC(U)  &trans     &kp LG(MINUS)
                           &trans  &trans    &trans    &trans
             >;
         };
